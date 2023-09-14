@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Login</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<header>
+    <div class="top-header">
+        <div class="logo header-logo"> 
+            <img src="/images/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre">
+        </div>
+        <div class="form header-search" action="#" method="GET">
+            </nav>
+            <div class="input">Buscar productos, marcas y más</div>
+            <div class="submit"><i class="fa fa-search"></i></div>
+        </div>
+        <p><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
+    </div>
+    <nav class="main-navbar">
+        <ul class="left-navbar">
+            <li><a href="#">Ofertas</a></li>
+            <li><a href="#">Tiendas Oficiales</a></li>
+            <li><a href="#">Vender</a></li>
+            <li><a href="#">Ayuda</a></li>
+        </ul>
+        <ul class="rigth-navbar">
+            <li><a href="/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
+            <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+            <li><a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
+        </ul>
+    </nav>
+    <div class="burger-menu">
+        <i class="fa fa-bars burger"></i>
+    </div>
+</header>
+<body>
+    <h1>Ingresar al Sitio</h1>
+    <div class="login">
+    <form action="/login" method="POST">
+        <label for="nombre_usuario" class= "form-label-inside" >Nombre de usuario:</label>
+        <input type="text" id="nombre_usuario" name="nombre_usuario" class="form-imput" required><br>
+        <span class="error" id="error_nombre_usuario"></span><br>
+        
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required><br>
+        <span class="error" id="error_contrasena"></span><br>
+        
+        <input type="submit" value="Ingresar">
+    </form>
+    </div>
+
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function (event) {
+            const nombreUsuario = document.getElementById('nombre_usuario').value;
+            const contrasena = document.getElementById('contrasena').value;
+            let hasError = false;
+
+            
+            if (nombreUsuario.length < 3) {
+                document.getElementById('error_nombre_usuario').textContent = 'El nombre de usuario es demasiado corto.';
+                hasError = true;
+            } else {
+                document.getElementById('error_nombre_usuario').textContent = '';
+            }
+
+            
+            if (contrasena.length < 6) {
+                document.getElementById('error_contrasena').textContent = 'La contraseña es demasiado corta.';
+                hasError = true;
+            } else {
+                document.getElementById('error_contrasena').textContent = '';
+            }
+
+            if (hasError) {
+                event.preventDefault(); // Evitar el envío del formulario si hay errores
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+}
+
+h3{
+    font-size: 24px;
+}
+
+p{
+    font-size: 12px;
+}
+div.top-header{
+    padding: 5%;
+}
+
+header{
+    background-color: #EAC926;
+}
+
+header div.logo{
+    width: 50%;
+}
+
+header div.logo{
+    padding: 10px;
+}
+header nav{
+    font-size: 12px;
+}
+
+header ul li{
+    list-style-type: none;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+h1{ color: #666;
+font-weight: bold;
+font-size: 16px;}
+header .form .input{
+    background-color: #FFF;
+    border: 1px solid #000;
+    outline: none;
+    color: #666;
+    padding: 2px;
+    width: 90%;
+    height: 25px;
+    border-radius: 3px 0px 0px 3px;
+    font-size: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+header .form .submit{
+    background-color: #FFF;
+    border: 1px solid #000;
+    color: #666;
+    width: 10%;
+}
+
+header div.top-header p{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+div.burger-menu{
+    text-align: center;
+}
+
+div.burger-menu i{
+    background-color: #0044AA;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
+    height: 40px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    width: 40px;
+}
+
+article div.main-article{
+    width: 100%;
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+    position:relative;
+}
+
+.price{
+    font-size: 18px;
+}
+
+.discount,
+.description{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+h3,
+.description{
+    color: #666;
+}
+
+section.banner img{
+    width: 100%;
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section article{
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+main section article img{
+    width: 100%;
+}
+
+main section article i,
+.discount{
+    color: #39b54a;
+}
+main section article div.main-article i,
+main section article div.main-article .price,
+main section article div.main-article .discount,
+main section article div.main-article .description {
+    padding: 15px 0; }
+    
+footer {
+    background-color: #fff;
+    color: #666;
+    padding: 20px;
+    text-align: center;
+    margin: 0; 
+    width: 100%; 
+    position: relative; 
+    bottom: 0;
+}
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    text-align: center; 
+}
+
+.footer-section p {
+    font-size: 14px;
+    text-align: center; 
+}
+
+
+.footer-section i {
+    font-size: 2em; 
+    margin-bottom: 10px; 
+    color: #0044AA; }
+    
+
+    @media screen and (max-width: 480px) {
+       
+        main section article div.main-article .description {
+            display: block; 
+        }
+    }
+    
+
+    @media screen and (min-width: 481px) and (max-width: 768px)  {
+        header nav,
+    header ul:last-child {
+        display: none;
+        
+    }
+        .burger-menu {
+        display: block;
+    }
+    .article-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .article {
+        flex: 1;
+        max-width: calc(50% - 10px);
+        margin: 5px;
+    }
+}  
+    @media screen and (min-width: 769px) {
+       
+        main section article {
+            box-shadow: 0px 0px 10px rgb(100, 100, 100); 
+        }
+        header div.top-header p{
+            display: flex;
+            justify-content: flex-end;
+            margin:0;
+        }
+        header nav, header ul{
+            display: flex;
+            justify-content: space-between;
+            margin: 0px 5px;
+        }
+        header nav, ul.left-navbar li{
+            margin: 0 5px;
+        }
+        header nav, header ul.rigth-navbar li{
+            margin: 0 5px;
+        }
+        .burger-menu {
+            display: none;
+        }
+    }
+
+    main section article div.main-article .price {
+        display: inline-block;
+        width: 30%; 
+        font-size: 18px;
+        font-weight: bold;
+        color: #000; 
+    }
+    
+    main section article div.main-article .discount {
+        display: inline-block;
+        width: 70%; 
+        font-size: 16px;
+        font-weight: normal;
+        color: #39b54a; 
+    }
+
+    main section article div.main-article i  {
+        display: block;
+        font-size: 16px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #39b54a;
+        background-color: #FFF;
+        border-radius: 50%;
+        position:absolute;
+        right: 20px;
+        top: -15px;
+    }
+    .info {position: relative;}
+    
+   .register{
+    width: auto !important ;
+    font-size: 14px;
+    font-style: normal;
+    color: #666;
+   }
+    
+   /* Estilo para etiquetas que quedan dentro de los campos de entrada */
+.form-label-inside {
+    position: relative; 
+    top: 0; 
+    left: 0; 
+    color: #666; 
+    pointer-events: none; 
+    transition: top 0.2s, left 0.2s, font-size 0.2s; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+/* Estilo para campos de entrada */
+.form-input {
+    color: #666;
+    border-radius: 5px 5px 5px 5px;
+    border-style: hidden; /* Necesario para posicionar las etiquetas de manera absoluta */
+}
+
+/* Estilo para campos de entrada con contenido */
+.form-input:focus + .form-label-inside,
+.form-input:not(:placeholder-shown) + .form-label-inside {
+    top: -8px; /* Ajusta la posición superior cuando el campo de entrada tiene contenido */
+    left: -8px; /* Ajusta la posición izquierda cuando el campo de entrada tiene contenido */
+    font-size: 12px; /* Cambia el tamaño de fuente cuando el campo de entrada tiene contenido */
+    color: #666; /* Cambia el color del texto cuando el campo de entrada tiene contenido */
+    background-color: #fff; /* Puedes cambiar el color de fondo para que las etiquetas sean más visibles */
+}
+
+
+
+
+
+
+
+
+
+
+
+
