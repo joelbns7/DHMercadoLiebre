@@ -16,23 +16,35 @@ h3{
 p{
     font-size: 12px;
 }
-div.top-header{
+
+div.top-header {
+    display: flex;
+    flex-wrap: wrap;
     padding: 5%;
-}
+  }
 
 header{
     background-color: #EAC926;
+    
 }
 
-header div.logo{
-    width: 50%;
-}
 
-header div.logo{
+header div.logo,
+header .form {
+  width: 50%;
+}
+header div.logo {
     padding: 10px;
-}
-header nav{
+  }
+  header .form {
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    font-size: 11px;
+  }
+  header nav{
     font-size: 12px;
+    margin-left: 20px;
 }
 
 header ul li{
@@ -65,14 +77,27 @@ header .form .submit{
     background-color: #FFF;
     border: 1px solid #000;
     color: #666;
-    width: 10%;
+    width: 5%;
+    height: 25px;
 }
+.form.header-search {
+    display: flex;
+    width: 50%;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 10%;}
+.search-bar{
+    flex:1;
+    width:50% ;
+text-align: center; }
 
-header div.top-header p{
+header div.top-header p {
     width: 100%;
     text-align: center;
     margin-top: 10px;
-}
+  }
 
 div.burger-menu{
     text-align: center;
@@ -170,61 +195,6 @@ footer {
     color: #0044AA; }
     
 
-    @media screen and (max-width: 480px) {
-       
-        main section article div.main-article .description {
-            display: block; 
-        }
-    }
-    
-
-    @media screen and (min-width: 481px) and (max-width: 768px)  {
-        header nav,
-    header ul:last-child {
-        display: none;
-        
-    }
-        .burger-menu {
-        display: block;
-    }
-    .article-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .article {
-        flex: 1;
-        max-width: calc(50% - 10px);
-        margin: 5px;
-    }
-}  
-    @media screen and (min-width: 769px) {
-       
-        main section article {
-            box-shadow: 0px 0px 10px rgb(100, 100, 100); 
-        }
-        header div.top-header p{
-            display: flex;
-            justify-content: flex-end;
-            margin:0;
-        }
-        header nav, header ul{
-            display: flex;
-            justify-content: space-between;
-            margin: 0px 5px;
-        }
-        header nav, ul.left-navbar li{
-            margin: 0 5px;
-        }
-        header nav, header ul.rigth-navbar li{
-            margin: 0 5px;
-        }
-        .burger-menu {
-            display: none;
-        }
-    }
-
     main section article div.main-article .price {
         display: inline-block;
         width: 30%; 
@@ -255,6 +225,13 @@ footer {
         top: -15px;
     }
     .info {position: relative;}
+
+   
+.main-article:hover .fa-truck {
+    transform: rotate(270deg);
+    transition: transform 0.3s ease; 
+}
+
     
    .register{
     width: auto !important ;
@@ -263,7 +240,7 @@ footer {
     color: #666;
    }
     
-   /* Estilo para etiquetas que quedan dentro de los campos de entrada */
+  
 .form-label-inside {
     position: relative; 
     top: 0; 
@@ -277,30 +254,144 @@ footer {
 
 }
 
-/* Estilo para campos de entrada */
+
 .form-input {
     color: #666;
     border-radius: 5px 5px 5px 5px;
-    border-style: hidden; /* Necesario para posicionar las etiquetas de manera absoluta */
+    border-style: hidden; 
 }
 
-/* Estilo para campos de entrada con contenido */
+
 .form-input:focus + .form-label-inside,
 .form-input:not(:placeholder-shown) + .form-label-inside {
-    top: -8px; /* Ajusta la posición superior cuando el campo de entrada tiene contenido */
-    left: -8px; /* Ajusta la posición izquierda cuando el campo de entrada tiene contenido */
-    font-size: 12px; /* Cambia el tamaño de fuente cuando el campo de entrada tiene contenido */
-    color: #666; /* Cambia el color del texto cuando el campo de entrada tiene contenido */
-    background-color: #fff; /* Puedes cambiar el color de fondo para que las etiquetas sean más visibles */
+    top: -8px; 
+    left: -8px; 
+    font-size: 12px; 
+    color: #666; 
+    background-color: #fff; 
+}
+
+.submit-button {
+    padding: 8px 16px;
+    border: revert;
+    cursor: pointer;
+    transition: background-color 1.3s ease; 
+}
+.submit-button:hover {
+    background-color: #0022AA;
+    
 }
 
 
+.main-article .description {
+    visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s linear;
+      }
+     
 
 
+.main-article:hover .description {
+    visibility: visible;
+        opacity: 1;
+}
 
 
+.main-article:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
 
+.article-container{
+display: flex;
+flex-wrap: wrap; 
+justify-content: space-between; }
+.article{
+    flex: 0 0 calc(25%-20px); 
+    margin: 10px;}
 
+    @media screen and (max-width: 480px) {
+       
+        main section article div.main-article .description {
+            display: block; 
+        }
+        .article {
+            flex-basis: 100%; 
+    }
+}
+
+    @media screen and (min-width: 481px) and (max-width: 768px)  {
+        header nav,
+    header ul:last-child {
+        display: none;
+        
+    }
+        .burger-menu {
+        display: block;
+    }
+    main section div.products article {
+        width: 45%;
+      }
+   
+    .article {
+        flex-basis: calc(50%-20px);
+    }
+}  
+    @media screen and (min-width: 769px) {
+       
+        main section article {
+            box-shadow: 0px 0px 10px rgb(100, 100, 100); 
+        }
+        main section div.products article {
+            width: 22%;}
+        .article{
+            flex-basis: calc(25%-20px);
+        }
+        div.top-header {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 5%;
+            margin-left: -40px;
+            justify-content: center;
+            align-items: stretch;
+            flex-direction: row;
+            margin-right: 40px;
+            margin-top: 0px;
+            margin-bottom: 0px;}
+        
+            header div.top-header p{
+                display: flex;
+                margin: 0px;
+                margin-left: 59px;
+                margin-top: -20px;
+                position: relative;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: flex-end;
+                align-items: flex-start;
+        }
+        header nav, header ul{
+            display: flex;
+            justify-content: space-between;
+            margin: 0px 5px;
+        }
+        header nav, ul.left-navbar li{
+            margin: 0 5px;
+        }
+        header nav, header ul.rigth-navbar li{
+            margin: 0 5px;
+        }
+        .burger-menu {
+            display: none;
+        }
+        footer{
+             text-align: center;
+            display: flex;
+        align-content: space-between;}
+            .footer-section{
+                flex: 1;
+                text-align: center;
+            }
+        }
 
 
 
