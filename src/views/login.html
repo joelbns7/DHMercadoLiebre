@@ -42,19 +42,17 @@
     </div>
 </header>
 <body>
-    <h1>Ingresar al Sitio</h1>
     <div class="login">
     <form action="/login" method="POST">
-        <label for="nombre_usuario" class= "form-label-inside" >Nombre de usuario:</label>
-        <input type="text" id="nombre_usuario" name="nombre_usuario" class="form-imput" required><br>
-        <span class="error" id="error_nombre_usuario"></span><br>
-        
-        <label for="contrasena">Contraseña:</label>
-        <input type="password" id="contrasena" name="contrasena" required><br>
-        <span class="error" id="error_contrasena"></span><br>
-        
-        
-        <button type="submit" class="submit-button">Ingresar</button>
+        <div class="usuario">
+            <input type="text" id="nombre_usuario" name="nombre_usuario" class="form-input" required placeholder="Nombre de usuario">
+            <span class="error" id="error_nombre_usuario"></span>
+          </div>
+          <div class="contrasena">
+            <input type="password" id="contrasena" name="contrasena" class="form-input" required placeholder="Contraseña">
+            <span class="error" id="error_contrasena"></span>
+          </div>
+          <button type="submit" class="submit-button">Ingresar</button>
     </form>
     </div>
 
