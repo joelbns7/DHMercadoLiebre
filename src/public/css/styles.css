@@ -233,8 +233,30 @@ footer {
     transition: transform 0.3s ease; 
 }
 
-    
-   .register{
+    #header-register{
+        background-color: #EAC926;
+    }
+    #header-register div.top-header{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 5%;
+        margin-left: -40px;
+        justify-content: center;
+        align-items: stretch;
+        flex-direction: row;
+        margin-right: 40px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    #header-register section.banner{
+        width: 100%;
+        transform: translate(0px, 4px);
+    }
+    #header-login section.banner{
+        width: 100%;
+        transform: translate(0px, 4px);
+    }
+   .registro{
     width: auto ;
     font-size: 14px;
     font-style: normal;
@@ -319,7 +341,15 @@ justify-content: space-between; }
 .article{
     flex: 0 0 calc(25%-20px); 
     margin: 10px;}
-
+   .botonesReg{
+    display: flex;
+   }
+   .botonEnv{
+    padding: 10px;
+   }
+   .botonRes{
+    padding: 10px;
+   }
     @media screen and (max-width: 480px) {
        
         main section article div.main-article .description {
@@ -346,6 +376,7 @@ justify-content: space-between; }
     .article {
         flex-basis: calc(50%-20px);
     }
+    
 }  
     @media screen and (min-width: 769px) {
        
