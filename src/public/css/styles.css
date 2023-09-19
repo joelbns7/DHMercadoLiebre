@@ -266,7 +266,7 @@ footer {
     
   
    .form-label-inside {
-    display: none; /* Oculta el texto de marcador de posición por defecto */
+    display: none; 
   }
   
   .form-input {
@@ -288,11 +288,11 @@ footer {
   }
   
   .form-input::placeholder {
-    color: #aaa; /* Color gris claro para el texto de marcador de posición */
+    color: #aaa; 
   }
   
   .form-input:focus::placeholder {
-    color: transparent; /* Hace que el texto de marcador de posición sea transparente cuando el campo está enfocado */
+    color: transparent; 
   }
   
   .submit-button {
@@ -302,8 +302,8 @@ footer {
     transition: background-color 1.3s ease;
     width: 75%;
     height: 35px;
-    background-color: #007bff; /* Color de fondo del botón */
-    color: #fff; /* Color del texto del botón */
+    background-color: #007bff; 
+    color: #fff; 
     border-radius: 5px;
     font-size: 18px;
     margin-top: 10px;
