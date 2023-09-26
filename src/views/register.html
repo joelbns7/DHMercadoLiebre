@@ -8,19 +8,20 @@
     <title>Registro de Usuario</title>
 </head>
 <body>
-<header id="header-register">
-    
-    <div class="top-header">
-        <div class="logo header-logo"> 
-            <img src="/images/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre">
-        </div>
-        <div class="search-bar">
+    <header>
+        <div class="top-header">
+            <div id="logo-search-container">
+            <div class="logo header-logo"> 
+                <img src="/images/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre">
+            </div>
+            <div class="search-bar">
             <div class="form header-search" action="#" method="GET">
                 </nav>
                 <div class="input">Buscar productos, marcas y más</div>
                 <div class="submit"><i class="fa fa-search"></i></div>
             </div>
             <p><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
+        </div>
         </div>
         </div>
         <nav class="main-navbar">
@@ -43,22 +44,21 @@
     <section class="banner">
         <img src="/images/img-home-banner.jpg" alt="Banner de ofertas">
     </section>
-</header>
-<body>
+    <body>
     <div class="registro">
         <h1>Registro de Usuario</h1>
-    <form action="/register" method="POST" enctype="multipart/form-data">
+    <form class="form-register" action="/register" method="POST" enctype="multipart/form-data">
         <label for="nombre" class="form-label-inside">Nombre y Apellido:</label>
-        <input type="text" id="nombre" name="nombre" class="form-imput" required placeholder="Nombre y Apellido"><br><br>
+        <input class="input-control" type="text" id="nombre" name="nombre" class="form-imput" required placeholder="Nombre y Apellido"><br><br>
         
         <label for="nombre_usuario" class="form-label-inside">Nombre de usuario:</label>
-        <input type="text" id="nombre_usuario" name="nombre_usuario" class="form-imput" required placeholder="Nombre de usuario"><br><br>
+        <input  class="input-control" type="text" id="nombre_usuario" name="nombre_usuario" class="form-imput" required placeholder="Nombre de usuario"><br><br>
         
         <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
         <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required placeholder="Fecha de Nacimiento"><br><br>
         
-        <label for="domicilio">Domicilio:</label>
-        <input type="text" id="domicilio" name="domicilio" required placeholder="Domicilio"><br><br>
+        <label for="domicilio" class="form-label-inside">Domicilio:</label>
+        <input  class="input-control" type="text" id="domicilio" name="domicilio" required placeholder="Domicilio"><br><br>
         
         <label>Perfil del usuario:</label><br>
         <input type="radio" id="comprador" name="perfil" value="Comprador" required>
@@ -82,10 +82,10 @@
         <input type="file" id="foto_usuario" name="foto_usuario" accept="image/*" required><br><br>
         
         <label for="contrasena">Contraseña:</label>
-        <input type="password" id="contrasena" name="contrasena" required placeholder="Contraseña"><br><br>
+        <input class="input-control" type="password" id="contrasena" name="contrasena" required placeholder="Contraseña"><br><br>
         
         <label for="confirmar_contrasena">Confirmar Contraseña:</label>
-        <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" required placeholder="Confirmar Contraseña"><br><br>
+        <input class="input-control" type="password" id="confirmar_contrasena" name="confirmar_contrasena" required placeholder="Confirmar Contraseña"><br><br>
         <div class="botonesReg">
             <div class="botonEnv">
         <input type="submit" value="Enviar">
@@ -98,6 +98,7 @@
 </div>
 </body>
 <footer>
+    <div class="footer-container">
     <div class="footer-section">
         <i class="fas fa-credit-card"></i>
         <h4>Pagá con tarjeta o en efectivo</h4>
@@ -113,7 +114,14 @@
         <h4>Seguridad, de principio a fin</h4>
         <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás siempre protegid@.</p>
     </div>
+</div>
+</div>
+    <div class="copyright">
+        <ul>
+            <p>Copyright © 1999-2023 MercadoLiebre S.R.L.</p>
+        </ul>
+    </div>
 </footer>
+
 </body>
-</html>
 </html>

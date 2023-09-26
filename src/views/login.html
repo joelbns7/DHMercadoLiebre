@@ -13,18 +13,20 @@
     </style>
 </head>
 <body>
-<header id="header-login">
-    <div class="top-header">
-        <div class="logo header-logo"> 
-            <img src="/images/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre">
-        </div>
-        <div class="search-bar">
+    <header>
+        <div class="top-header">
+            <div id="logo-search-container">
+            <div class="logo header-logo"> 
+                <img src="/images/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre">
+            </div>
+            <div class="search-bar">
             <div class="form header-search" action="#" method="GET">
                 </nav>
                 <div class="input">Buscar productos, marcas y más</div>
                 <div class="submit"><i class="fa fa-search"></i></div>
             </div>
             <p><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
+        </div>
         </div>
         </div>
         <nav class="main-navbar">
@@ -47,10 +49,9 @@
     <section class="banner">
         <img src="/images/img-home-banner.jpg" alt="Banner de ofertas">
     </section>
-</header>
-<body>
+    <main>
     <div class="login">
-    <form action="/login" method="POST">
+    <form class="container-login" action="/login" method="POST">
         <div class="usuario">
             <input type="text" id="nombre_usuario" name="nombre_usuario" class="form-input" required placeholder="Nombre de usuario">
             <span class="error" id="error_nombre_usuario"></span>
@@ -59,8 +60,10 @@
             <input type="password" id="contrasena" name="contrasena" class="form-input" required placeholder="Contraseña">
             <span class="error" id="error_contrasena"></span>
           </div>
+          <div class="button-container">
           <button type="submit" class="submit-button">Ingresar</button>
-    </form>
+          </div>
+        </form>
     </div>
 
     <script>
@@ -91,8 +94,9 @@
             }
         });
     </script>
-</body>
+</main>
 <footer>
+    <div class="footer-container">
     <div class="footer-section">
         <i class="fas fa-credit-card"></i>
         <h4>Pagá con tarjeta o en efectivo</h4>
@@ -108,7 +112,13 @@
         <h4>Seguridad, de principio a fin</h4>
         <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás siempre protegid@.</p>
     </div>
+</div>
+</div>
+    <div class="copyright">
+        <ul>
+            <p>Copyright © 1999-2023 MercadoLiebre S.R.L.</p>
+        </ul>
+    </div>
 </footer>
 </body>
-</html>
 </html>
